@@ -1,0 +1,399 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --primary: #5746d8;
+    --dark: #17172d;
+    --light: #f7f7fc;
+    --muted: #77778b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: white;
+    color: var(--dark);
+}
+
+.navbar {
+    height: 78px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.nav-btn, .primary-btn {
+    background: var(--primary);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.hero {
+    min-height: 480px;
+    padding: 100px 10%;
+    background:
+            linear-gradient(110deg, #f0efff 0%, #f8f7ff 60%, #e7e5ff 100%);
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 66px);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-text {
+    color: var(--muted);
+    max-width: 550px;
+    line-height: 1.8;
+    margin: 22px 0 28px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    padding: 35px 15px;
+    background: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.stats h2 {
+    font-size: 30px;
+    color: #aaa0ff;
+}
+
+.stats p {
+    font-size: 13px;
+    color: #c5c5d3;
+    margin-top: 5px;
+}
+
+.events-section {
+    padding: 85px 9%;
+}
+
+.section-heading h2, .about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.section-heading p:last-child {
+    color: var(--muted);
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.filters input, .filters select {
+    padding: 14px 18px;
+    border: 1px solid #e1e1eb;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+
+.filters input {
+    flex: 1;
+}
+
+.filters input:focus, .filters select:focus {
+    border-color: var(--primary);
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.event-card {
+    border: 1px solid #ececf3;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.25s;
+    background: white;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px #25205a15;
+}
+
+.card-top {
+    background: linear-gradient(135deg, #eeecff, #dcd8ff);
+    padding: 25px;
+    min-height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-box {
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    min-width: 65px;
+}
+
+.date-box strong {
+    display: block;
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.date-box small {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.card-icon {
+    font-size: 55px;
+}
+
+.card-body {
+    padding: 23px;
+}
+
+.category {
+    color: var(--primary);
+    background: #f0efff;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.card-body h3 {
+    font-size: 19px;
+    margin: 17px 0 10px;
+}
+
+.card-body p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.event-info {
+    margin-top: 18px;
+    line-height: 2;
+    font-size: 13px;
+    color: #55556b;
+}
+
+.details-btn {
+    margin-top: 18px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--primary);
+    border-radius: 7px;
+    color: var(--primary);
+    background: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.no-events {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+}
+
+.about {
+    padding: 85px 10%;
+    text-align: center;
+    background: var(--light);
+}
+
+.about p:last-child {
+    max-width: 600px;
+    margin: 20px auto 0;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+footer {
+    background: var(--dark);
+    color: #c5c5d3;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #111124b8;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    margin: 20px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.modal-content p {
+    margin: 12px 0;
+    line-height: 1.7;
+    color: #626276;
+}
+
+.modal-divider {
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+        gap: 45px;
+    }
+}
+
+@media(max-width: 600px) {
+    .navbar {
+        padding: 15px 5%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 75px 7%;
+    }
+
+    .stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .stats h2 {
+        font-size: 24px;
+    }
+
+    .events-section {
+        padding: 60px 6%;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .section-heading h2, .about h2 {
+        font-size: 32px;
+    }
+}
